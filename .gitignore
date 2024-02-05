@@ -1,0 +1,7 @@
+# dependencies
+/node_modules
+/coverage
+/dist/*
+
+.DS_Store
+package-lock.json
