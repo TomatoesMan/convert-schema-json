@@ -5,13 +5,13 @@ This is a function that converts schema into json. It converts json into json. T
 ## Installation
 
 ```
-npm i schema2json
+npm i convert-schema-json
 ```
 
 ## Usage
 
 ```js
-import { convert } from 'schema2json';
+import { convert } from 'convert-schema-json';
 
 // Ordinary use
 const data = [

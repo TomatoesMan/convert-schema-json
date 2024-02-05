@@ -1,6 +1,6 @@
 {
-  "name": "schema2json",
-  "version": "1.0.0",
+  "name": "convert-schema-json",
+  "version": "1.0.1",
   "description": "schema to json",
   "main": "index.js",
   "scripts": {
@@ -14,7 +14,8 @@
     "schema",
     "json",
     "schema-to-json",
-    "schema2json"
+    "schema2json",
+    "convert-schema-json"
   ],
   "devDependencies": {
     "@babel/core": "^7.23.7",
