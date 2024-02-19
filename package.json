@@ -1,6 +1,6 @@
 {
   "name": "convert-schema-json",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "schema to json",
   "main": "index.js",
   "scripts": {
@@ -10,6 +10,14 @@
   "type": "module",
   "author": "TomatoesMan",
   "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/TomatoesMan/convert-schema-json.git"
+  },
+  "bugs": {
+    "url": "https://github.com/TomatoesMan/convert-schema-json/issues"
+  },
+  "homepage": "https://github.com/TomatoesMan/convert-schema-json",
   "keywords": [
     "schema",
     "json",
