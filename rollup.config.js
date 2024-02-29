@@ -9,8 +9,26 @@ export default [{
     input: 'src/index.ts',
     output: {
         name: 'schema2json',
-        file: 'dist/index.js',
-        format: 'umd'
+        file: 'dist/cjs/index.js',
+        format: 'cjs'
+    },
+    plugins: [
+        typescript(),
+        resolve(),
+        commonjs(),
+        babel({
+            babelHelpers: 'bundled',
+            exclude: 'node_modules/**'
+        }),
+        terser()
+    ],
+},
+{
+    input: 'src/index.ts',
+    output: {
+        name: 'schema2json',
+        file: 'dist/esm/index.js',
+        format: 'esm'
     },
     plugins: [
         typescript(),
@@ -25,6 +43,6 @@ export default [{
 },
 {
     input: "src/index.ts",
-    output: [{ file: "dist/index.d.ts", format: "es" }],
+    output: [{ file: "dist/types/index.d.ts", format: "es" }],
     plugins: [dts()],
 }];
