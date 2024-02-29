@@ -1,8 +1,8 @@
 {
   "name": "convert-schema-json",
-  "version": "1.0.2",
+  "version": "1.0.4",
   "description": "schema to json",
-  "main": "index.js",
+  "main": "dist/index.js",
   "scripts": {
     "test": "jest",
     "build": "rollup --config"
@@ -10,6 +10,10 @@
   "type": "module",
   "author": "TomatoesMan",
   "license": "MIT",
+  "files": [
+    "dist",
+    "README.md"
+  ],
   "repository": {
     "type": "git",
     "url": "git+https://github.com/TomatoesMan/convert-schema-json.git"
@@ -44,5 +48,8 @@
     "rollup": "^4.9.5",
     "rollup-plugin-commonjs": "^10.1.0",
     "ts-jest": "^29.1.1"
+  },
+  "dependencies": {
+    "rollup-plugin-dts": "^6.1.0"
   }
 }

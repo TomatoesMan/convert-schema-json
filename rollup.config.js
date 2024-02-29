@@ -3,12 +3,14 @@ import commonjs from 'rollup-plugin-commonjs';
 import babel from "@rollup/plugin-babel";
 import resolve from "@rollup/plugin-node-resolve";
 import terser from '@rollup/plugin-terser';
+import { dts } from 'rollup-plugin-dts';
 
-export default {
+export default [{
     input: 'src/index.ts',
     output: {
-        file: 'dist/bundle.js',
-        format: 'cjs'
+        name: 'schema2json',
+        file: 'dist/index.js',
+        format: 'umd'
     },
     plugins: [
         typescript(),
@@ -20,4 +22,9 @@ export default {
         }),
         terser()
     ],
-};
+},
+{
+    input: "src/index.ts",
+    output: [{ file: "dist/index.d.ts", format: "es" }],
+    plugins: [dts()],
+}];
