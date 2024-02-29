@@ -1,6 +1,6 @@
 {
   "name": "convert-schema-json",
-  "version": "1.0.6",
+  "version": "1.0.7",
   "description": "schema to json",
   "types": "dist/types/index.d.ts",
   "main": "dist/cjs/index.js",

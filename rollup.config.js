@@ -19,6 +19,22 @@ export default [{
         babel({
             babelHelpers: 'bundled',
             exclude: 'node_modules/**'
+        })
+    ],
+},{
+    input: 'src/index.ts',
+    output: {
+        name: 'schema2json',
+        file: 'dist/cjs/index.min.js',
+        format: 'cjs'
+    },
+    plugins: [
+        typescript(),
+        resolve(),
+        commonjs(),
+        babel({
+            babelHelpers: 'bundled',
+            exclude: 'node_modules/**'
         }),
         terser()
     ],
@@ -38,11 +54,33 @@ export default [{
             babelHelpers: 'bundled',
             exclude: 'node_modules/**'
         }),
+    ],
+},
+{
+    input: 'src/index.ts',
+    output: {
+        name: 'schema2json',
+        file: 'dist/esm/index.min.js',
+        format: 'esm'
+    },
+    plugins: [
+        typescript(),
+        resolve(),
+        commonjs(),
+        babel({
+            babelHelpers: 'bundled',
+            exclude: 'node_modules/**'
+        }),
         terser()
     ],
 },
 {
     input: "src/index.ts",
     output: [{ file: "dist/types/index.d.ts", format: "es" }],
+    plugins: [dts()],
+},
+{
+    input: "src/index.ts",
+    output: [{ file: "dist/types/index.d.cts", format: "cjs" }],
     plugins: [dts()],
 }];
